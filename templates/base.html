@@ -30,17 +30,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 {% endblock %}
 
-{% block extra_js %
-{% endblock %}}
+    {% block extra_js %}
+    {% endblock %}
 
     <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
-
   </head>
   <body>
     <header class="container-fluid fixed-top"></header>
 
     {% if messages %}
-    <div class="message-container"></div>
+        <div class="message-container"></div>
     {% endif %}
 
     {% block page_header %}
@@ -51,8 +50,6 @@
 
     {% block postloadjs %}
     {% endblock %}
-
-
 
     
   </body>
