@@ -9,6 +9,7 @@ Order Date: {{ order.date }}
 {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}                       
 Qty: {{ item.quantity }} -  ${{ item.product.price }} each               
 {% endfor %}
+{{ item.product.image.url }}
 
 Order Total: ${{ order.order_total }}
 Delivery: ${{ order.delivery_cost }}
