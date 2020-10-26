@@ -6,7 +6,14 @@ Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
 Order Details:
-{{ item.product.name.id }}
+{{ product_count }}
+
+{% for item in order.lineitems.all %}
+                    
+{{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
+                        
+{{ item.quantity }} @ ${{ item.product.price }} each               
+{% endfor %}
 
 Order Total: ${{ order.order_total }}
 Delivery: ${{ order.delivery_cost }}
