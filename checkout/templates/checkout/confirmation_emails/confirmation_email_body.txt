@@ -6,9 +6,7 @@ Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
 Order Details:
-{{ item.product.name }}
-{{ item.product_size }} - Size: {{ item.product.size|upper }}
-Qty: {{ item.quantity }}
+{{ item.product.name.id }}
 
 Order Total: ${{ order.order_total }}
 Delivery: ${{ order.delivery_cost }}
